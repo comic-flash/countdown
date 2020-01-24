@@ -9,28 +9,31 @@ var timer = document.getElementById("timer");
 
 var test = 0.0001;
 
-var horaDelRegalo = new Date();
-var porcent = document.getElementById("porcent");
 
-horaDelRegalo.setUTCFullYear(2019);
-horaDelRegalo.setUTCMonth(9);
-horaDelRegalo.setUTCDate(12);
-horaDelRegalo.setUTCHours(18);
-horaDelRegalo.setUTCMinutes(0);
-horaDelRegalo.setUTCSeconds(0);
-horaDelRegalo.setUTCMilliseconds(0);
+var porcent = document.getElementById("porcent");
 
 var comienzo = new Date();
 
-comienzo.setUTCFullYear(2019);
-comienzo.setUTCMonth(8);
-comienzo.setUTCDate(14);
-comienzo.setUTCHours(9);
+comienzo.setUTCFullYear(2020);
+comienzo.setUTCMonth(0);
+comienzo.setUTCDate(23);
+comienzo.setUTCHours(23);
 comienzo.setUTCMinutes(0);
 comienzo.setUTCSeconds(0);
 comienzo.setUTCMilliseconds(0);
+
+var horaDelRegalo = new Date();
+
+horaDelRegalo.setUTCFullYear(2020);
+horaDelRegalo.setUTCMonth(1);
+horaDelRegalo.setUTCDate(1);
+horaDelRegalo.setUTCHours(22);
+horaDelRegalo.setUTCMinutes(0);
+horaDelRegalo.setUTCSeconds(0);
+horaDelRegalo.setUTCMilliseconds(0);
 var logo = document.getElementById("logo");
 
+console.log(horaDelRegalo,comienzo)
 
 var number = document.getElementById("number");
 
@@ -126,11 +129,13 @@ var porcentaje = getPercentage();
 
     if(porcentaje>=1){
         if(set){
+        /*
             console.log("yeet")
             porcent.innerHTML="Ha ocurrido una excepción. Por favor, contacte con el\n técnico responsable."
             logo.src="logo-glitch.gif"
-    
+    */
             clearTimeout(yeet);
+            
         }else{
            draw(1);
         set=true; 
@@ -150,9 +155,16 @@ var porcentaje = getPercentage();
     
 }//
 
+var horaActual2 = new Date();
+
+
 function getPercentage(){
 
     var horaActual = Date.now();
+    
+    
+    
+    
 
 var porcentaje = (horaActual-comienzo.getTime())/(horaDelRegalo.getTime()-comienzo.getTime())
 
