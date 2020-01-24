@@ -90,4 +90,5 @@ body{
     margin:auto;
    z-index:-1;
     opacity:100;
+    display:none;
 }
