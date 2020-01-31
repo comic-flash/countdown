@@ -31,6 +31,8 @@ horaDelRegalo.setUTCHours(22);
 horaDelRegalo.setUTCMinutes(0);
 horaDelRegalo.setUTCSeconds(0);
 horaDelRegalo.setUTCMilliseconds(0);
+
+horaDelRegalo.setUTCMonth(1);
 var logo = document.getElementById("logo");
 
 console.log(horaDelRegalo,comienzo)
